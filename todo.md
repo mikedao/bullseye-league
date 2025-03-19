@@ -3,23 +3,23 @@
 ## Phase 0: Project Setup and Foundation
 
 ### 0.1: Initial Rails Project Setup
-- [ ] Generate new Rails 7 project with PostgreSQL
-- [ ] Configure development environment
-- [ ] Create Git repository and initial commit
-- [ ] Set up RSpec testing framework
-- [ ] Add Factory Bot Rails gem
-- [ ] Add Faker gem for test data
-- [ ] Add Shoulda Matchers gem
-- [ ] Add Database Cleaner gem
-- [ ] Configure CI with GitHub Actions (.github/workflows/ci.yml)
-- [ ] Configure database.yml for all environments
-- [ ] Set up test environment in config/environments/test.rb
-- [ ] Create Home controller with index action
-- [ ] Write RSpec tests for Home controller
-- [ ] Set root route to home#index
-- [ ] Add Bootstrap 5 for basic styling
-- [ ] Create basic layout template with responsive design
-- [ ] Test that the homepage renders correctly
+- [x] Generate new Rails 7 project with PostgreSQL
+- [x] Configure development environment
+- [x] Create Git repository and initial commit
+- [x] Set up RSpec testing framework
+- [x] Add Factory Bot Rails gem
+- [x] Add Faker gem for test data
+- [x] Add Shoulda Matchers gem
+- [x] Add Database Cleaner gem
+- [x] Configure CI with GitHub Actions (.github/workflows/ci.yml)
+- [x] Configure database.yml for all environments
+- [x] Set up test environment in config/environments/test.rb
+- [x] Create Home controller with index action
+- [x] Write RSpec tests for Home controller
+- [x] Set root route to home#index
+- [x] Add Bootstrap 5 for basic styling
+- [x] Create basic layout template with responsive design
+- [x] Test that the homepage renders correctly
 
 ### 0.2: User Authentication Foundation
 - [ ] Add Devise gem to Gemfile

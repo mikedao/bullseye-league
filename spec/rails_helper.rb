@@ -1,4 +1,3 @@
-require 'factory_bot_rails'
 require 'faker'
 require 'shoulda/matchers'
 require 'database_cleaner/active_record'
