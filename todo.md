@@ -15,7 +15,7 @@
 - [x] Configure database.yml for all environments
 - [x] Set up test environment in config/environments/test.rb
 - [x] Create Home controller with index action
-- [x] Write RSpec tests for Home controller
+- [-] Write RSpec tests for Home controller
 - [x] Set root route to home#index
 - [x] Add Bootstrap 5 for basic styling
 - [x] Create basic layout template with responsive design
