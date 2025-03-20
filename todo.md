@@ -25,20 +25,20 @@
 - [x] Add Devise gem to Gemfile
 - [x] Run Devise installation
 - [x] Configure Devise initializer
-- [ ] Generate User model with Devise
-- [ ] Add username field to User model
-- [ ] Configure email confirmation
-- [ ] Configure account lockout after failed attempts
-- [ ] Implement password complexity validation
-- [ ] Configure trackable login statistics
-- [ ] Write model tests for User validations
-- [ ] Customize Devise views with Bootstrap styling
-- [ ] Create login/logout and registration forms
-- [ ] Style authentication pages
-- [ ] Create basic user profile page with username, email, join date
-- [ ] Write feature tests for profile page
-- [ ] Implement navigation bar with login/logout links
-- [ ] Test authentication workflow
+- [x] Generate User model with Devise
+- [x] Add username field to User model
+- [x] Configure email confirmation
+- [x] Configure account lockout after failed attempts
+- [x] Implement password complexity validation
+- [x] Configure trackable login statistics
+- [x] Write model tests for User validations
+- [x] Customize Devise views with Bootstrap styling
+- [x] Create login/logout and registration forms
+- [x] Style authentication pages
+- [x] Create basic user profile page with username, email, join date
+- [x] Write feature tests for profile page
+- [x] Implement navigation bar with login/logout links
+- [x] Test authentication workflow
 
 ### 0.3: User Roles and Authorization System
 - [ ] Add Pundit gem for authorization
