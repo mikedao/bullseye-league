@@ -22,9 +22,9 @@
 - [x] Test that the homepage renders correctly
 
 ### 0.2: User Authentication Foundation
-- [ ] Add Devise gem to Gemfile
-- [ ] Run Devise installation
-- [ ] Configure Devise initializer
+- [x] Add Devise gem to Gemfile
+- [x] Run Devise installation
+- [x] Configure Devise initializer
 - [ ] Generate User model with Devise
 - [ ] Add username field to User model
 - [ ] Configure email confirmation

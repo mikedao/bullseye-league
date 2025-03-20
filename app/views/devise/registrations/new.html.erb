@@ -1,0 +1,50 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">Sign up</h2>
+        </div>
+        
+        <div class="card-body">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="mb-3">
+              <%= f.label :username, class: "form-label" %>
+              <%= f.text_field :username, autofocus: true, class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= f.label :email, class: "form-label" %>
+              <%= f.email_field :email, autocomplete: "email", class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= f.label :password, class: "form-label" %>
+              <% if @minimum_password_length %>
+                <small class="form-text text-muted">
+                  (<%= @minimum_password_length %> characters minimum, must include uppercase and number)
+                </small>
+              <% end %>
+              <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= f.label :password_confirmation, class: "form-label" %>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+            </div>
+
+            <div class="d-grid">
+              <%= f.submit "Sign up", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+        
+        <div class="card-footer">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

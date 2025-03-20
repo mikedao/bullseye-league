@@ -1,8 +1,52 @@
-<div class="container mt-5">
-  <div class="jumbotron">
-    <h1>NRA Bullseye League Score Tracking</h1>
-    <p class="lead">Welcome to the Bullseye League score tracking application.</p>
-    <hr class="my-4">
-    <p>Track scores, monitor rankings, and manage your league competitions.</p>
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold">NRA Bullseye League</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">
+      Welcome to the NRA Bullseye League Score Tracking Application. 
+      Track your scores, monitor your progress, and compete with others.
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <% if user_signed_in? %>
+        <%= link_to "View Profile", profile_path, class: "btn btn-primary btn-lg px-4 gap-3" %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg px-4 gap-3" %>
+        <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-secondary btn-lg px-4" %>
+      <% end %>
+    </div>
   </div>
 </div>
+
+<% unless user_signed_in? %>
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Track Scores</h4>
+        </div>
+        <div class="card-body">
+          <p>Record and analyze your scores from each match. Track your performance over time.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Join Leagues</h4>
+        </div>
+        <div class="card-body">
+          <p>Participate in multiple leagues and see how you stack up against the competition.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Monitor Progress</h4>
+        </div>
+        <div class="card-body">
+          <p>See detailed statistics and visualizations to help improve your shooting performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

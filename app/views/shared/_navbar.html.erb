@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <div class="container">
+    <%= link_to "NRA Bullseye League", root_path, class: "navbar-brand" %>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link #{current_page?(root_path) ? 'active' : ''}" %>
+        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Leagues", "#", class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+      
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= current_user.username %>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li>
+                <%= link_to "Profile", profile_path, class: "dropdown-item" %>
+              </li>
+              <li>
+                <%= link_to "Account Settings", edit_user_registration_path, class: "dropdown-item" %>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item", form: { data: { turbo: false } } %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Sign In", new_user_session_path, class: "nav-link #{current_page?(new_user_session_path) ? 'active' : ''}" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link #{current_page?(new_user_registration_path) ? 'active' : ''}" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
